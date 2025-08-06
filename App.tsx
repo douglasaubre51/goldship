@@ -5,24 +5,30 @@
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { Text, View } from "react-native";
+
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
+    <View style={{
+      margin: 20,
+    }}>
+      <Text style={{
+        fontSize: 32,
+      }}>
+        hello, i am back for my throne
+      </Text>
+      <Text style={{
+        marginTop: 10,
+        fontSize: 20
+      }}
+      >
+        now this world shall know pain
+      </Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;
